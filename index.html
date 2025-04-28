@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konark Sun Temple</title>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+
+  <body>
+    <div class="scroll-container">
+      <div class="section">
+        <div class="left">
+          <div>
+            <h1>Konark Sun Temple</h1>
+            <p>
+              The Konark Sun Temple, built in the 13th century in Odisha, India,
+              is a UNESCO World Heritage Site renowned for its stunning
+              architecture resembling a colossal chariot dedicated to the Sun
+              God, Surya. Its intricate stone carvings and massive wheels
+              showcase the pinnacle of Kalinga artistry.
+            </p>
+          </div>
+        </div>
+        <div class="right">
+          <model-viewer
+            src="src/assets/models/konark_optimised_13mb.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            tone-mapping="neutral"
+            poster="poster.webp"
+            shadow-intensity="1"
+            auto-rotate
+          >
+            <button
+              class="Hotspot"
+              slot="hotspot-2"
+              data-position="-0.255538988302757m 3.6369887965329024m 7.828023456105246m"
+              data-normal="0.0508872740370343m -0.019960789609644772m 0.9985049084602635m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation">Front</div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-3"
+              data-position="7.522503651488363m 4.312944972100366m 0.44896422499779476m"
+              data-normal="0.9986605492425894m -0.01942580459695713m 0.047955661837271235m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation">Side</div>
+            </button>
+            <div class="progress-bar" slot="progress-bar">
+              <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">View in your space</button>
+            <div id="ar-prompt">
+              <img src="src/assets/images/ar_hand_prompt-human-hand.png" />
+            </div>
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+    <script src="src/main.js"></script>
+  </body>
+</html>
